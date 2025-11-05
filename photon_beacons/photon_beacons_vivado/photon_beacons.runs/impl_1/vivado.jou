@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Nov  4 19:04:31 2025
+# Process ID: 291818
+# Current directory: /home/public/llmmqp/photon_beacons/photon_beacons_vivado/photon_beacons.runs/impl_1
+# Command line: vivado -log top_photon.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_photon.tcl -notrace
+# Log file: /home/public/llmmqp/photon_beacons/photon_beacons_vivado/photon_beacons.runs/impl_1/top_photon.vdi
+# Journal file: /home/public/llmmqp/photon_beacons/photon_beacons_vivado/photon_beacons.runs/impl_1/vivado.jou
+# Running On: mitre-Precision-5820-Tower, OS: Linux, CPU Frequency: 1200.043 MHz, CPU Physical cores: 18, Host memory: 540506 MB
+#-----------------------------------------------------------
+source top_photon.tcl -notrace

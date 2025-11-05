@@ -1,0 +1,2751 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Tue Nov  4 19:02:02 2025
+| Host         : mitre-Precision-5820-Tower running 64-bit Ubuntu 24.04.2 LTS
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_photon_timing_summary_routed.rpt -pb top_photon_timing_summary_routed.pb -rpx top_photon_timing_summary_routed.rpx -warn_on_violation
+| Design       : top_photon
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                    Violations  
+---------  --------  -----------------------------  ----------  
+TIMING-18  Warning   Missing input or output delay  5           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (1)
+6. checking no_output_delay (4)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (1)
+------------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (4)
+-------------------------------
+ There are 4 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      7.197        0.000                      0                   27        0.308        0.000                      0                   27        4.500        0.000                       0                    28  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
+-----   ------------       ----------      --------------
+sysclk  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sysclk              7.197        0.000                      0                   27        0.308        0.000                      0                   27        4.500        0.000                       0                    28  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+(none)        sysclk                      
+(none)                      sysclk        
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sysclk
+  To Clock:  sysclk
+
+Setup :            0  Failing Endpoints,  Worst Slack        7.197ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.308ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             7.197ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[25]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.847ns  (logic 2.083ns (73.173%)  route 0.764ns (26.827%))
+  Logic Levels:           7  (CARRY4=7)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.213ns = ( 15.213 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.084 r  u_beacons/divr_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    u_beacons/divr_reg[16]_i_1_n_0
+    SLICE_X0Y16          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.201 r  u_beacons/divr_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.201    u_beacons/divr_reg[20]_i_1_n_0
+    SLICE_X0Y17          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.524 r  u_beacons/divr_reg[24]_i_1/O[1]
+                         net (fo=1, routed)           0.000     8.524    u_beacons/divr_reg[24]_i_1_n_6
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.648    15.213    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[25]/C
+                         clock pessimism              0.434    15.647    
+                         clock uncertainty           -0.035    15.612    
+    SLICE_X0Y17          FDCE (Setup_fdce_C_D)        0.109    15.721    u_beacons/divr_reg[25]
+  -------------------------------------------------------------------
+                         required time                         15.721    
+                         arrival time                          -8.524    
+  -------------------------------------------------------------------
+                         slack                                  7.197    
+
+Slack (MET) :             7.281ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[26]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.763ns  (logic 1.999ns (72.358%)  route 0.764ns (27.642%))
+  Logic Levels:           7  (CARRY4=7)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.213ns = ( 15.213 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.084 r  u_beacons/divr_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    u_beacons/divr_reg[16]_i_1_n_0
+    SLICE_X0Y16          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.201 r  u_beacons/divr_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.201    u_beacons/divr_reg[20]_i_1_n_0
+    SLICE_X0Y17          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.440 r  u_beacons/divr_reg[24]_i_1/O[2]
+                         net (fo=1, routed)           0.000     8.440    u_beacons/divr_reg[24]_i_1_n_5
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.648    15.213    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+                         clock pessimism              0.434    15.647    
+                         clock uncertainty           -0.035    15.612    
+    SLICE_X0Y17          FDCE (Setup_fdce_C_D)        0.109    15.721    u_beacons/divr_reg[26]
+  -------------------------------------------------------------------
+                         required time                         15.721    
+                         arrival time                          -8.440    
+  -------------------------------------------------------------------
+                         slack                                  7.281    
+
+Slack (MET) :             7.301ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[24]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.743ns  (logic 1.979ns (72.156%)  route 0.764ns (27.844%))
+  Logic Levels:           7  (CARRY4=7)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.213ns = ( 15.213 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.084 r  u_beacons/divr_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    u_beacons/divr_reg[16]_i_1_n_0
+    SLICE_X0Y16          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.201 r  u_beacons/divr_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.201    u_beacons/divr_reg[20]_i_1_n_0
+    SLICE_X0Y17          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     8.420 r  u_beacons/divr_reg[24]_i_1/O[0]
+                         net (fo=1, routed)           0.000     8.420    u_beacons/divr_reg[24]_i_1_n_7
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.648    15.213    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[24]/C
+                         clock pessimism              0.434    15.647    
+                         clock uncertainty           -0.035    15.612    
+    SLICE_X0Y17          FDCE (Setup_fdce_C_D)        0.109    15.721    u_beacons/divr_reg[24]
+  -------------------------------------------------------------------
+                         required time                         15.721    
+                         arrival time                          -8.420    
+  -------------------------------------------------------------------
+                         slack                                  7.301    
+
+Slack (MET) :             7.315ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[21]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.730ns  (logic 1.966ns (72.024%)  route 0.764ns (27.977%))
+  Logic Levels:           6  (CARRY4=6)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.214ns = ( 15.214 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.084 r  u_beacons/divr_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    u_beacons/divr_reg[16]_i_1_n_0
+    SLICE_X0Y16          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.407 r  u_beacons/divr_reg[20]_i_1/O[1]
+                         net (fo=1, routed)           0.000     8.407    u_beacons/divr_reg[20]_i_1_n_6
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.649    15.214    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[21]/C
+                         clock pessimism              0.434    15.648    
+                         clock uncertainty           -0.035    15.613    
+    SLICE_X0Y16          FDCE (Setup_fdce_C_D)        0.109    15.722    u_beacons/divr_reg[21]
+  -------------------------------------------------------------------
+                         required time                         15.722    
+                         arrival time                          -8.407    
+  -------------------------------------------------------------------
+                         slack                                  7.315    
+
+Slack (MET) :             7.323ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[23]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.722ns  (logic 1.958ns (71.941%)  route 0.764ns (28.059%))
+  Logic Levels:           6  (CARRY4=6)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.214ns = ( 15.214 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.084 r  u_beacons/divr_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    u_beacons/divr_reg[16]_i_1_n_0
+    SLICE_X0Y16          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     8.399 r  u_beacons/divr_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000     8.399    u_beacons/divr_reg[20]_i_1_n_4
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.649    15.214    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[23]/C
+                         clock pessimism              0.434    15.648    
+                         clock uncertainty           -0.035    15.613    
+    SLICE_X0Y16          FDCE (Setup_fdce_C_D)        0.109    15.722    u_beacons/divr_reg[23]
+  -------------------------------------------------------------------
+                         required time                         15.722    
+                         arrival time                          -8.399    
+  -------------------------------------------------------------------
+                         slack                                  7.323    
+
+Slack (MET) :             7.399ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[22]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.646ns  (logic 1.882ns (71.135%)  route 0.764ns (28.865%))
+  Logic Levels:           6  (CARRY4=6)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.214ns = ( 15.214 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.084 r  u_beacons/divr_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    u_beacons/divr_reg[16]_i_1_n_0
+    SLICE_X0Y16          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.323 r  u_beacons/divr_reg[20]_i_1/O[2]
+                         net (fo=1, routed)           0.000     8.323    u_beacons/divr_reg[20]_i_1_n_5
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.649    15.214    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[22]/C
+                         clock pessimism              0.434    15.648    
+                         clock uncertainty           -0.035    15.613    
+    SLICE_X0Y16          FDCE (Setup_fdce_C_D)        0.109    15.722    u_beacons/divr_reg[22]
+  -------------------------------------------------------------------
+                         required time                         15.722    
+                         arrival time                          -8.323    
+  -------------------------------------------------------------------
+                         slack                                  7.399    
+
+Slack (MET) :             7.419ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[20]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.626ns  (logic 1.862ns (70.915%)  route 0.764ns (29.085%))
+  Logic Levels:           6  (CARRY4=6)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.214ns = ( 15.214 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.084 r  u_beacons/divr_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.084    u_beacons/divr_reg[16]_i_1_n_0
+    SLICE_X0Y16          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     8.303 r  u_beacons/divr_reg[20]_i_1/O[0]
+                         net (fo=1, routed)           0.000     8.303    u_beacons/divr_reg[20]_i_1_n_7
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.649    15.214    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[20]/C
+                         clock pessimism              0.434    15.648    
+                         clock uncertainty           -0.035    15.613    
+    SLICE_X0Y16          FDCE (Setup_fdce_C_D)        0.109    15.722    u_beacons/divr_reg[20]
+  -------------------------------------------------------------------
+                         required time                         15.722    
+                         arrival time                          -8.303    
+  -------------------------------------------------------------------
+                         slack                                  7.419    
+
+Slack (MET) :             7.433ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[17]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.613ns  (logic 1.849ns (70.771%)  route 0.764ns (29.229%))
+  Logic Levels:           5  (CARRY4=5)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.215ns = ( 15.215 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.290 r  u_beacons/divr_reg[16]_i_1/O[1]
+                         net (fo=1, routed)           0.000     8.290    u_beacons/divr_reg[16]_i_1_n_6
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.650    15.215    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[17]/C
+                         clock pessimism              0.434    15.649    
+                         clock uncertainty           -0.035    15.614    
+    SLICE_X0Y15          FDCE (Setup_fdce_C_D)        0.109    15.723    u_beacons/divr_reg[17]
+  -------------------------------------------------------------------
+                         required time                         15.723    
+                         arrival time                          -8.290    
+  -------------------------------------------------------------------
+                         slack                                  7.433    
+
+Slack (MET) :             7.441ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.605ns  (logic 1.841ns (70.681%)  route 0.764ns (29.319%))
+  Logic Levels:           5  (CARRY4=5)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.215ns = ( 15.215 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     8.282 r  u_beacons/divr_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     8.282    u_beacons/divr_reg[16]_i_1_n_4
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.650    15.215    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[19]/C
+                         clock pessimism              0.434    15.649    
+                         clock uncertainty           -0.035    15.614    
+    SLICE_X0Y15          FDCE (Setup_fdce_C_D)        0.109    15.723    u_beacons/divr_reg[19]
+  -------------------------------------------------------------------
+                         required time                         15.723    
+                         arrival time                          -8.282    
+  -------------------------------------------------------------------
+                         slack                                  7.441    
+
+Slack (MET) :             7.517ns  (required time - arrival time)
+  Source:                 u_beacons/divr_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[18]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sysclk rise@10.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        2.529ns  (logic 1.765ns (69.800%)  route 0.764ns (30.200%))
+  Logic Levels:           5  (CARRY4=5)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.215ns = ( 15.215 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.677ns
+    Clock Pessimism Removal (CPR):    0.434ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.832     5.677    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.518     6.195 r  u_beacons/divr_reg[1]/Q
+                         net (fo=1, routed)           0.764     6.959    u_beacons/divr_reg_n_0_[1]
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.657     7.616 r  u_beacons/divr_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.616    u_beacons/divr_reg[0]_i_1_n_0
+    SLICE_X0Y12          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.733 r  u_beacons/divr_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.733    u_beacons/divr_reg[4]_i_1_n_0
+    SLICE_X0Y13          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.850 r  u_beacons/divr_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.850    u_beacons/divr_reg[8]_i_1_n_0
+    SLICE_X0Y14          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.967 r  u_beacons/divr_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.967    u_beacons/divr_reg[12]_i_1_n_0
+    SLICE_X0Y15          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.206 r  u_beacons/divr_reg[16]_i_1/O[2]
+                         net (fo=1, routed)           0.000     8.206    u_beacons/divr_reg[16]_i_1_n_5
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)    10.000    10.000 r  
+    U7                                                0.000    10.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    10.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502    11.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.650    15.215    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[18]/C
+                         clock pessimism              0.434    15.649    
+                         clock uncertainty           -0.035    15.614    
+    SLICE_X0Y15          FDCE (Setup_fdce_C_D)        0.109    15.723    u_beacons/divr_reg[18]
+  -------------------------------------------------------------------
+                         required time                         15.723    
+                         arrival time                          -8.206    
+  -------------------------------------------------------------------
+                         slack                                  7.517    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.308ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.442ns  (logic 0.279ns (63.107%)  route 0.163ns (36.893%))
+  Logic Levels:           2  (CARRY4=1 LUT1=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.168ns
+    Source Clock Delay      (SCD):    1.650ns
+    Clock Pessimism Removal (CPR):    0.518ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.621     1.650    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.164     1.814 f  u_beacons/divr_reg[0]/Q
+                         net (fo=1, routed)           0.163     1.977    u_beacons/divr_reg_n_0_[0]
+    SLICE_X0Y11          LUT1 (Prop_lut1_I0_O)        0.045     2.022 r  u_beacons/divr[0]_i_2/O
+                         net (fo=1, routed)           0.000     2.022    u_beacons/divr[0]_i_2_n_0
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.070     2.092 r  u_beacons/divr_reg[0]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.092    u_beacons/divr_reg[0]_i_1_n_7
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.891     2.168    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[0]/C
+                         clock pessimism             -0.518     1.650    
+    SLICE_X0Y11          FDCE (Hold_fdce_C_D)         0.134     1.784    u_beacons/divr_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.784    
+                         arrival time                           2.092    
+  -------------------------------------------------------------------
+                         slack                                  0.308    
+
+Slack (MET) :             0.315ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[16]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[16]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.449ns  (logic 0.279ns (62.071%)  route 0.170ns (37.929%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.164ns
+    Source Clock Delay      (SCD):    1.648ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.619     1.648    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y15          FDCE (Prop_fdce_C_Q)         0.164     1.812 r  u_beacons/divr_reg[16]/Q
+                         net (fo=1, routed)           0.170     1.983    u_beacons/divr_reg_n_0_[16]
+    SLICE_X0Y15          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.098 r  u_beacons/divr_reg[16]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.098    u_beacons/divr_reg[16]_i_1_n_7
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.887     2.164    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[16]/C
+                         clock pessimism             -0.516     1.648    
+    SLICE_X0Y15          FDCE (Hold_fdce_C_D)         0.134     1.782    u_beacons/divr_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -1.782    
+                         arrival time                           2.098    
+  -------------------------------------------------------------------
+                         slack                                  0.315    
+
+Slack (MET) :             0.315ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[12]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.449ns  (logic 0.279ns (62.071%)  route 0.170ns (37.929%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.165ns
+    Source Clock Delay      (SCD):    1.648ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.619     1.648    u_beacons/CLK
+    SLICE_X0Y14          FDCE                                         r  u_beacons/divr_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y14          FDCE (Prop_fdce_C_Q)         0.164     1.812 r  u_beacons/divr_reg[12]/Q
+                         net (fo=1, routed)           0.170     1.983    u_beacons/divr_reg_n_0_[12]
+    SLICE_X0Y14          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.098 r  u_beacons/divr_reg[12]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.098    u_beacons/divr_reg[12]_i_1_n_7
+    SLICE_X0Y14          FDCE                                         r  u_beacons/divr_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.888     2.165    u_beacons/CLK
+    SLICE_X0Y14          FDCE                                         r  u_beacons/divr_reg[12]/C
+                         clock pessimism             -0.517     1.648    
+    SLICE_X0Y14          FDCE (Hold_fdce_C_D)         0.134     1.782    u_beacons/divr_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -1.782    
+                         arrival time                           2.098    
+  -------------------------------------------------------------------
+                         slack                                  0.315    
+
+Slack (MET) :             0.315ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[20]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[20]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.449ns  (logic 0.279ns (62.071%)  route 0.170ns (37.929%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.163ns
+    Source Clock Delay      (SCD):    1.647ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.618     1.647    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[20]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y16          FDCE (Prop_fdce_C_Q)         0.164     1.811 r  u_beacons/divr_reg[20]/Q
+                         net (fo=1, routed)           0.170     1.982    u_beacons/divr_reg_n_0_[20]
+    SLICE_X0Y16          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.097 r  u_beacons/divr_reg[20]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.097    u_beacons/divr_reg[20]_i_1_n_7
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.886     2.163    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[20]/C
+                         clock pessimism             -0.516     1.647    
+    SLICE_X0Y16          FDCE (Hold_fdce_C_D)         0.134     1.781    u_beacons/divr_reg[20]
+  -------------------------------------------------------------------
+                         required time                         -1.781    
+                         arrival time                           2.097    
+  -------------------------------------------------------------------
+                         slack                                  0.315    
+
+Slack (MET) :             0.315ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.449ns  (logic 0.279ns (62.071%)  route 0.170ns (37.929%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.166ns
+    Source Clock Delay      (SCD):    1.649ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.620     1.649    u_beacons/CLK
+    SLICE_X0Y12          FDCE                                         r  u_beacons/divr_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y12          FDCE (Prop_fdce_C_Q)         0.164     1.813 r  u_beacons/divr_reg[4]/Q
+                         net (fo=1, routed)           0.170     1.984    u_beacons/divr_reg_n_0_[4]
+    SLICE_X0Y12          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.099 r  u_beacons/divr_reg[4]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.099    u_beacons/divr_reg[4]_i_1_n_7
+    SLICE_X0Y12          FDCE                                         r  u_beacons/divr_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.889     2.166    u_beacons/CLK
+    SLICE_X0Y12          FDCE                                         r  u_beacons/divr_reg[4]/C
+                         clock pessimism             -0.517     1.649    
+    SLICE_X0Y12          FDCE (Hold_fdce_C_D)         0.134     1.783    u_beacons/divr_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.783    
+                         arrival time                           2.099    
+  -------------------------------------------------------------------
+                         slack                                  0.315    
+
+Slack (MET) :             0.315ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.449ns  (logic 0.279ns (62.071%)  route 0.170ns (37.929%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.165ns
+    Source Clock Delay      (SCD):    1.648ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.619     1.648    u_beacons/CLK
+    SLICE_X0Y13          FDCE                                         r  u_beacons/divr_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y13          FDCE (Prop_fdce_C_Q)         0.164     1.812 r  u_beacons/divr_reg[8]/Q
+                         net (fo=1, routed)           0.170     1.983    u_beacons/divr_reg_n_0_[8]
+    SLICE_X0Y13          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.098 r  u_beacons/divr_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.098    u_beacons/divr_reg[8]_i_1_n_7
+    SLICE_X0Y13          FDCE                                         r  u_beacons/divr_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.888     2.165    u_beacons/CLK
+    SLICE_X0Y13          FDCE                                         r  u_beacons/divr_reg[8]/C
+                         clock pessimism             -0.517     1.648    
+    SLICE_X0Y13          FDCE (Hold_fdce_C_D)         0.134     1.782    u_beacons/divr_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.782    
+                         arrival time                           2.098    
+  -------------------------------------------------------------------
+                         slack                                  0.315    
+
+Slack (MET) :             0.315ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[24]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[24]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.449ns  (logic 0.279ns (62.071%)  route 0.170ns (37.929%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.162ns
+    Source Clock Delay      (SCD):    1.646ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.617     1.646    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.164     1.810 r  u_beacons/divr_reg[24]/Q
+                         net (fo=1, routed)           0.170     1.981    u_beacons/divr_reg_n_0_[24]
+    SLICE_X0Y17          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     2.096 r  u_beacons/divr_reg[24]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.096    u_beacons/divr_reg[24]_i_1_n_7
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.885     2.162    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[24]/C
+                         clock pessimism             -0.516     1.646    
+    SLICE_X0Y17          FDCE (Hold_fdce_C_D)         0.134     1.780    u_beacons/divr_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -1.780    
+                         arrival time                           2.096    
+  -------------------------------------------------------------------
+                         slack                                  0.315    
+
+Slack (MET) :             0.343ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.477ns  (logic 0.314ns (65.814%)  route 0.163ns (34.186%))
+  Logic Levels:           2  (CARRY4=1 LUT1=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.168ns
+    Source Clock Delay      (SCD):    1.650ns
+    Clock Pessimism Removal (CPR):    0.518ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.621     1.650    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y11          FDCE (Prop_fdce_C_Q)         0.164     1.814 f  u_beacons/divr_reg[0]/Q
+                         net (fo=1, routed)           0.163     1.977    u_beacons/divr_reg_n_0_[0]
+    SLICE_X0Y11          LUT1 (Prop_lut1_I0_O)        0.045     2.022 r  u_beacons/divr[0]_i_2/O
+                         net (fo=1, routed)           0.000     2.022    u_beacons/divr[0]_i_2_n_0
+    SLICE_X0Y11          CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.105     2.127 r  u_beacons/divr_reg[0]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.127    u_beacons/divr_reg[0]_i_1_n_6
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.891     2.168    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+                         clock pessimism             -0.518     1.650    
+    SLICE_X0Y11          FDCE (Hold_fdce_C_D)         0.134     1.784    u_beacons/divr_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.784    
+                         arrival time                           2.127    
+  -------------------------------------------------------------------
+                         slack                                  0.343    
+
+Slack (MET) :             0.350ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[16]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[17]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.484ns  (logic 0.314ns (64.811%)  route 0.170ns (35.189%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.164ns
+    Source Clock Delay      (SCD):    1.648ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.619     1.648    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y15          FDCE (Prop_fdce_C_Q)         0.164     1.812 r  u_beacons/divr_reg[16]/Q
+                         net (fo=1, routed)           0.170     1.983    u_beacons/divr_reg_n_0_[16]
+    SLICE_X0Y15          CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.150     2.133 r  u_beacons/divr_reg[16]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.133    u_beacons/divr_reg[16]_i_1_n_6
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.887     2.164    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[17]/C
+                         clock pessimism             -0.516     1.648    
+    SLICE_X0Y15          FDCE (Hold_fdce_C_D)         0.134     1.782    u_beacons/divr_reg[17]
+  -------------------------------------------------------------------
+                         required time                         -1.782    
+                         arrival time                           2.133    
+  -------------------------------------------------------------------
+                         slack                                  0.350    
+
+Slack (MET) :             0.350ns  (arrival time - required time)
+  Source:                 u_beacons/divr_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_beacons/divr_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.484ns  (logic 0.314ns (64.811%)  route 0.170ns (35.189%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.165ns
+    Source Clock Delay      (SCD):    1.648ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.619     1.648    u_beacons/CLK
+    SLICE_X0Y14          FDCE                                         r  u_beacons/divr_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y14          FDCE (Prop_fdce_C_Q)         0.164     1.812 r  u_beacons/divr_reg[12]/Q
+                         net (fo=1, routed)           0.170     1.983    u_beacons/divr_reg_n_0_[12]
+    SLICE_X0Y14          CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.150     2.133 r  u_beacons/divr_reg[12]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.133    u_beacons/divr_reg[12]_i_1_n_6
+    SLICE_X0Y14          FDCE                                         r  u_beacons/divr_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.888     2.165    u_beacons/CLK
+    SLICE_X0Y14          FDCE                                         r  u_beacons/divr_reg[13]/C
+                         clock pessimism             -0.517     1.648    
+    SLICE_X0Y14          FDCE (Hold_fdce_C_D)         0.134     1.782    u_beacons/divr_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.782    
+                         arrival time                           2.133    
+  -------------------------------------------------------------------
+                         slack                                  0.350    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sysclk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_in }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y0  clk_in_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X0Y11    u_beacons/divr_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X0Y13    u_beacons/divr_reg[10]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X0Y13    u_beacons/divr_reg[11]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X0Y14    u_beacons/divr_reg[12]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X0Y14    u_beacons/divr_reg[13]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X0Y14    u_beacons/divr_reg[14]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X0Y14    u_beacons/divr_reg[15]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X0Y15    u_beacons/divr_reg[16]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X0Y15    u_beacons/divr_reg[17]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y11    u_beacons/divr_reg[0]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y11    u_beacons/divr_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y13    u_beacons/divr_reg[10]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y13    u_beacons/divr_reg[10]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y13    u_beacons/divr_reg[11]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y13    u_beacons/divr_reg[11]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y14    u_beacons/divr_reg[12]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y14    u_beacons/divr_reg[12]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y14    u_beacons/divr_reg[13]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y14    u_beacons/divr_reg[13]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y11    u_beacons/divr_reg[0]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y11    u_beacons/divr_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y13    u_beacons/divr_reg[10]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y13    u_beacons/divr_reg[10]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y13    u_beacons/divr_reg[11]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y13    u_beacons/divr_reg[11]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y14    u_beacons/divr_reg[12]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y14    u_beacons/divr_reg[12]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y14    u_beacons/divr_reg[13]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X0Y14    u_beacons/divr_reg[13]/C
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay             4 Endpoints
+Min Delay             4 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 sw[0]
+                            (input port)
+  Destination:            led[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.448ns  (logic 5.197ns (61.511%)  route 3.252ns (38.489%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W6                                                0.000     0.000 r  sw[0] (IN)
+                         net (fo=0)                   0.000     0.000    sw[0]
+    W6                   IBUF (Prop_ibuf_I_O)         1.471     1.471 r  sw_IBUF[0]_inst/O
+                         net (fo=1, routed)           1.582     3.053    u_beacons/sw_IBUF[0]
+    SLICE_X0Y9           LUT2 (Prop_lut2_I0_O)        0.124     3.177 r  u_beacons/led_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           1.669     4.846    led_OBUF[0]
+    Y12                  OBUF (Prop_obuf_I_O)         3.602     8.448 r  led_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     8.448    led[0]
+    Y12                                                               r  led[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sw[1]
+                            (input port)
+  Destination:            led[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.354ns  (logic 5.102ns (61.075%)  route 3.252ns (38.925%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 r  sw[1] (IN)
+                         net (fo=0)                   0.000     0.000    sw[1]
+    V6                   IBUF (Prop_ibuf_I_O)         1.466     1.466 r  sw_IBUF[1]_inst/O
+                         net (fo=1, routed)           1.582     3.048    u_beacons/sw_IBUF[1]
+    SLICE_X0Y10          LUT2 (Prop_lut2_I0_O)        0.124     3.172 r  u_beacons/led_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           1.669     4.841    led_OBUF[1]
+    U5                   OBUF (Prop_obuf_I_O)         3.513     8.354 r  led_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     8.354    led[1]
+    U5                                                                r  led[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sw[3]
+                            (input port)
+  Destination:            led[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.316ns  (logic 5.219ns (62.752%)  route 3.098ns (37.248%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V11                                               0.000     0.000 r  sw[3] (IN)
+                         net (fo=0)                   0.000     0.000    sw[3]
+    V11                  IBUF (Prop_ibuf_I_O)         1.507     1.507 r  sw_IBUF[3]_inst/O
+                         net (fo=1, routed)           1.376     2.883    u_beacons/sw_IBUF[3]
+    SLICE_X0Y10          LUT2 (Prop_lut2_I0_O)        0.124     3.007 r  u_beacons/led_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           1.721     4.728    led_OBUF[3]
+    Y11                  OBUF (Prop_obuf_I_O)         3.588     8.316 r  led_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     8.316    led[3]
+    Y11                                                               r  led[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sw[2]
+                            (input port)
+  Destination:            led[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.140ns  (logic 5.199ns (63.866%)  route 2.941ns (36.134%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V10                                               0.000     0.000 r  sw[2] (IN)
+                         net (fo=0)                   0.000     0.000    sw[2]
+    V10                  IBUF (Prop_ibuf_I_O)         1.505     1.505 r  sw_IBUF[2]_inst/O
+                         net (fo=1, routed)           1.270     2.775    u_beacons/sw_IBUF[2]
+    SLICE_X0Y10          LUT2 (Prop_lut2_I0_O)        0.124     2.899 r  u_beacons/led_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           1.671     4.570    led_OBUF[2]
+    T5                   OBUF (Prop_obuf_I_O)         3.570     8.140 r  led_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     8.140    led[2]
+    T5                                                                r  led[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 sw[2]
+                            (input port)
+  Destination:            led[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.407ns  (logic 1.588ns (65.991%)  route 0.818ns (34.009%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V10                                               0.000     0.000 r  sw[2] (IN)
+                         net (fo=0)                   0.000     0.000    sw[2]
+    V10                  IBUF (Prop_ibuf_I_O)         0.272     0.272 r  sw_IBUF[2]_inst/O
+                         net (fo=1, routed)           0.476     0.748    u_beacons/sw_IBUF[2]
+    SLICE_X0Y10          LUT2 (Prop_lut2_I0_O)        0.045     0.793 r  u_beacons/led_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           0.342     1.136    led_OBUF[2]
+    T5                   OBUF (Prop_obuf_I_O)         1.271     2.407 r  led_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     2.407    led[2]
+    T5                                                                r  led[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sw[1]
+                            (input port)
+  Destination:            led[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.421ns  (logic 1.492ns (61.638%)  route 0.929ns (38.362%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V6                                                0.000     0.000 r  sw[1] (IN)
+                         net (fo=0)                   0.000     0.000    sw[1]
+    V6                   IBUF (Prop_ibuf_I_O)         0.233     0.233 r  sw_IBUF[1]_inst/O
+                         net (fo=1, routed)           0.608     0.842    u_beacons/sw_IBUF[1]
+    SLICE_X0Y10          LUT2 (Prop_lut2_I0_O)        0.045     0.887 r  u_beacons/led_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           0.320     1.207    led_OBUF[1]
+    U5                   OBUF (Prop_obuf_I_O)         1.214     2.421 r  led_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.421    led[1]
+    U5                                                                r  led[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sw[3]
+                            (input port)
+  Destination:            led[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.483ns  (logic 1.608ns (64.738%)  route 0.876ns (35.262%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    V11                                               0.000     0.000 r  sw[3] (IN)
+                         net (fo=0)                   0.000     0.000    sw[3]
+    V11                  IBUF (Prop_ibuf_I_O)         0.274     0.274 r  sw_IBUF[3]_inst/O
+                         net (fo=1, routed)           0.523     0.798    u_beacons/sw_IBUF[3]
+    SLICE_X0Y10          LUT2 (Prop_lut2_I0_O)        0.045     0.843 r  u_beacons/led_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           0.352     1.195    led_OBUF[3]
+    Y11                  OBUF (Prop_obuf_I_O)         1.288     2.483 r  led_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     2.483    led[3]
+    Y11                                                               r  led[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sw[0]
+                            (input port)
+  Destination:            led[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.514ns  (logic 1.586ns (63.067%)  route 0.929ns (36.933%))
+  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W6                                                0.000     0.000 r  sw[0] (IN)
+                         net (fo=0)                   0.000     0.000    sw[0]
+    W6                   IBUF (Prop_ibuf_I_O)         0.239     0.239 r  sw_IBUF[0]_inst/O
+                         net (fo=1, routed)           0.608     0.847    u_beacons/sw_IBUF[0]
+    SLICE_X0Y9           LUT2 (Prop_lut2_I0_O)        0.045     0.892 r  u_beacons/led_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           0.320     1.212    led_OBUF[0]
+    Y12                  OBUF (Prop_obuf_I_O)         1.302     2.514 r  led_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.514    led[0]
+    Y12                                                               r  led[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  sysclk
+  To Clock:  
+
+Max Delay             4 Endpoints
+Min Delay             4 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_beacons/divr_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.137ns  (logic 4.230ns (59.270%)  route 2.907ns (40.730%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.826     5.671    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.518     6.189 r  u_beacons/divr_reg[26]/Q
+                         net (fo=5, routed)           1.186     7.375    u_beacons/blink_gate
+    SLICE_X0Y10          LUT2 (Prop_lut2_I1_O)        0.124     7.499 r  u_beacons/led_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           1.721     9.220    led_OBUF[3]
+    Y11                  OBUF (Prop_obuf_I_O)         3.588    12.808 r  led_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    12.808    led[3]
+    Y11                                                               r  led[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_beacons/divr_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.955ns  (logic 4.244ns (61.022%)  route 2.711ns (38.978%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.826     5.671    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.518     6.189 r  u_beacons/divr_reg[26]/Q
+                         net (fo=5, routed)           1.042     7.231    u_beacons/blink_gate
+    SLICE_X0Y9           LUT2 (Prop_lut2_I1_O)        0.124     7.355 r  u_beacons/led_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           1.669     9.024    led_OBUF[0]
+    Y12                  OBUF (Prop_obuf_I_O)         3.602    12.626 r  led_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    12.626    led[0]
+    Y12                                                               r  led[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_beacons/divr_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.782ns  (logic 4.212ns (62.106%)  route 2.570ns (37.894%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.826     5.671    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.518     6.189 r  u_beacons/divr_reg[26]/Q
+                         net (fo=5, routed)           0.899     7.088    u_beacons/blink_gate
+    SLICE_X0Y10          LUT2 (Prop_lut2_I1_O)        0.124     7.212 r  u_beacons/led_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           1.671     8.884    led_OBUF[2]
+    T5                   OBUF (Prop_obuf_I_O)         3.570    12.454 r  led_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    12.454    led[2]
+    T5                                                                r  led[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_beacons/divr_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.725ns  (logic 4.155ns (61.775%)  route 2.571ns (38.225%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.573     1.573 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.744    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.845 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.826     5.671    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.518     6.189 r  u_beacons/divr_reg[26]/Q
+                         net (fo=5, routed)           0.902     7.091    u_beacons/blink_gate
+    SLICE_X0Y10          LUT2 (Prop_lut2_I1_O)        0.124     7.215 r  u_beacons/led_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           1.669     8.884    led_OBUF[1]
+    U5                   OBUF (Prop_obuf_I_O)         3.513    12.397 r  led_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    12.397    led[1]
+    U5                                                                r  led[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_beacons/divr_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.205ns  (logic 1.423ns (64.506%)  route 0.783ns (35.494%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.617     1.646    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.164     1.810 r  u_beacons/divr_reg[26]/Q
+                         net (fo=5, routed)           0.463     2.273    u_beacons/blink_gate
+    SLICE_X0Y10          LUT2 (Prop_lut2_I1_O)        0.045     2.318 r  u_beacons/led_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           0.320     2.638    led_OBUF[1]
+    U5                   OBUF (Prop_obuf_I_O)         1.214     3.851 r  led_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     3.851    led[1]
+    U5                                                                r  led[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_beacons/divr_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.283ns  (logic 1.480ns (64.821%)  route 0.803ns (35.179%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.617     1.646    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.164     1.810 r  u_beacons/divr_reg[26]/Q
+                         net (fo=5, routed)           0.461     2.271    u_beacons/blink_gate
+    SLICE_X0Y10          LUT2 (Prop_lut2_I1_O)        0.045     2.316 r  u_beacons/led_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           0.342     2.658    led_OBUF[2]
+    T5                   OBUF (Prop_obuf_I_O)         1.271     3.929 r  led_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     3.929    led[2]
+    T5                                                                r  led[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_beacons/divr_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.347ns  (logic 1.511ns (64.387%)  route 0.836ns (35.613%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.617     1.646    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.164     1.810 r  u_beacons/divr_reg[26]/Q
+                         net (fo=5, routed)           0.516     2.326    u_beacons/blink_gate
+    SLICE_X0Y9           LUT2 (Prop_lut2_I1_O)        0.045     2.371 r  u_beacons/led_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           0.320     2.691    led_OBUF[0]
+    Y12                  OBUF (Prop_obuf_I_O)         1.302     3.993 r  led_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     3.993    led[0]
+    Y12                                                               r  led[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_beacons/divr_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            led[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.394ns  (logic 1.497ns (62.542%)  route 0.897ns (37.458%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.663     1.003    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.029 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.617     1.646    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y17          FDCE (Prop_fdce_C_Q)         0.164     1.810 r  u_beacons/divr_reg[26]/Q
+                         net (fo=5, routed)           0.545     2.355    u_beacons/blink_gate
+    SLICE_X0Y10          LUT2 (Prop_lut2_I1_O)        0.045     2.400 r  u_beacons/led_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           0.352     2.752    led_OBUF[3]
+    Y11                  OBUF (Prop_obuf_I_O)         1.288     4.040 r  led_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     4.040    led[3]
+    Y11                                                               r  led[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  sysclk
+
+Max Delay            27 Endpoints
+Min Delay            27 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[24]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.301ns  (logic 1.672ns (38.882%)  route 2.629ns (61.118%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.213ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.213ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          1.234     4.301    u_beacons/rst
+    SLICE_X0Y17          FDCE                                         f  u_beacons/divr_reg[24]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.648     5.213    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[24]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[25]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.301ns  (logic 1.672ns (38.882%)  route 2.629ns (61.118%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.213ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.213ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          1.234     4.301    u_beacons/rst
+    SLICE_X0Y17          FDCE                                         f  u_beacons/divr_reg[25]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.648     5.213    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[25]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[26]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.301ns  (logic 1.672ns (38.882%)  route 2.629ns (61.118%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.213ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.213ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          1.234     4.301    u_beacons/rst
+    SLICE_X0Y17          FDCE                                         f  u_beacons/divr_reg[26]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.648     5.213    u_beacons/CLK
+    SLICE_X0Y17          FDCE                                         r  u_beacons/divr_reg[26]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[20]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.163ns  (logic 1.672ns (40.174%)  route 2.491ns (59.826%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.214ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.214ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          1.095     4.163    u_beacons/rst
+    SLICE_X0Y16          FDCE                                         f  u_beacons/divr_reg[20]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.649     5.214    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[20]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[21]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.163ns  (logic 1.672ns (40.174%)  route 2.491ns (59.826%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.214ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.214ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          1.095     4.163    u_beacons/rst
+    SLICE_X0Y16          FDCE                                         f  u_beacons/divr_reg[21]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.649     5.214    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[21]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[22]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.163ns  (logic 1.672ns (40.174%)  route 2.491ns (59.826%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.214ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.214ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          1.095     4.163    u_beacons/rst
+    SLICE_X0Y16          FDCE                                         f  u_beacons/divr_reg[22]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.649     5.214    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[22]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[23]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.163ns  (logic 1.672ns (40.174%)  route 2.491ns (59.826%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.214ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.214ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          1.095     4.163    u_beacons/rst
+    SLICE_X0Y16          FDCE                                         f  u_beacons/divr_reg[23]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.649     5.214    u_beacons/CLK
+    SLICE_X0Y16          FDCE                                         r  u_beacons/divr_reg[23]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[16]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.015ns  (logic 1.672ns (41.658%)  route 2.342ns (58.342%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.215ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.215ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.947     4.015    u_beacons/rst
+    SLICE_X0Y15          FDCE                                         f  u_beacons/divr_reg[16]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.650     5.215    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[16]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[17]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.015ns  (logic 1.672ns (41.658%)  route 2.342ns (58.342%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.215ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.215ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.947     4.015    u_beacons/rst
+    SLICE_X0Y15          FDCE                                         f  u_beacons/divr_reg[17]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.650     5.215    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[17]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[18]/CLR
+                            (recovery check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        4.015ns  (logic 1.672ns (41.658%)  route 2.342ns (58.342%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        5.215ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.215ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         1.548     1.548 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.395     2.944    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.124     3.068 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.947     4.015    u_beacons/rst
+    SLICE_X0Y15          FDCE                                         f  u_beacons/divr_reg[18]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         1.502     1.502 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.474    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.565 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          1.650     5.215    u_beacons/CLK
+    SLICE_X0Y15          FDCE                                         r  u_beacons/divr_reg[18]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[0]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.036ns  (logic 0.361ns (34.804%)  route 0.676ns (65.196%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.168ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.168ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.187     1.036    u_beacons/rst
+    SLICE_X0Y11          FDCE                                         f  u_beacons/divr_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.891     2.168    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[0]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[1]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.036ns  (logic 0.361ns (34.804%)  route 0.676ns (65.196%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.168ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.168ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.187     1.036    u_beacons/rst
+    SLICE_X0Y11          FDCE                                         f  u_beacons/divr_reg[1]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.891     2.168    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[1]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[2]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.036ns  (logic 0.361ns (34.804%)  route 0.676ns (65.196%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.168ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.168ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.187     1.036    u_beacons/rst
+    SLICE_X0Y11          FDCE                                         f  u_beacons/divr_reg[2]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.891     2.168    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[2]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[3]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.036ns  (logic 0.361ns (34.804%)  route 0.676ns (65.196%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.168ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.168ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.187     1.036    u_beacons/rst
+    SLICE_X0Y11          FDCE                                         f  u_beacons/divr_reg[3]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.891     2.168    u_beacons/CLK
+    SLICE_X0Y11          FDCE                                         r  u_beacons/divr_reg[3]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[4]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.040ns  (logic 0.361ns (34.675%)  route 0.679ns (65.325%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.166ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.166ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.191     1.040    u_beacons/rst
+    SLICE_X0Y12          FDCE                                         f  u_beacons/divr_reg[4]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.889     2.166    u_beacons/CLK
+    SLICE_X0Y12          FDCE                                         r  u_beacons/divr_reg[4]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[5]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.040ns  (logic 0.361ns (34.675%)  route 0.679ns (65.325%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.166ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.166ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.191     1.040    u_beacons/rst
+    SLICE_X0Y12          FDCE                                         f  u_beacons/divr_reg[5]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.889     2.166    u_beacons/CLK
+    SLICE_X0Y12          FDCE                                         r  u_beacons/divr_reg[5]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[6]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.040ns  (logic 0.361ns (34.675%)  route 0.679ns (65.325%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.166ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.166ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.191     1.040    u_beacons/rst
+    SLICE_X0Y12          FDCE                                         f  u_beacons/divr_reg[6]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.889     2.166    u_beacons/CLK
+    SLICE_X0Y12          FDCE                                         r  u_beacons/divr_reg[6]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[7]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.040ns  (logic 0.361ns (34.675%)  route 0.679ns (65.325%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.166ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.166ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.191     1.040    u_beacons/rst
+    SLICE_X0Y12          FDCE                                         f  u_beacons/divr_reg[7]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.889     2.166    u_beacons/CLK
+    SLICE_X0Y12          FDCE                                         r  u_beacons/divr_reg[7]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[10]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.103ns  (logic 0.361ns (32.686%)  route 0.743ns (67.314%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.165ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.165ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.255     1.103    u_beacons/rst
+    SLICE_X0Y13          FDCE                                         f  u_beacons/divr_reg[10]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.888     2.165    u_beacons/CLK
+    SLICE_X0Y13          FDCE                                         r  u_beacons/divr_reg[10]/C
+
+Slack:                    inf
+  Source:                 btn_rst_n
+                            (input port)
+  Destination:            u_beacons/divr_reg[11]/CLR
+                            (removal check against rising-edge clock sysclk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.103ns  (logic 0.361ns (32.686%)  route 0.743ns (67.314%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Clock Path Skew:        2.165ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.165ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    Y13                                               0.000     0.000 r  btn_rst_n (IN)
+                         net (fo=0)                   0.000     0.000    btn_rst_n
+    Y13                  IBUF (Prop_ibuf_I_O)         0.316     0.316 r  btn_rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.488     0.804    u_beacons/btn_rst_n_IBUF
+    SLICE_X0Y10          LUT1 (Prop_lut1_I0_O)        0.045     0.849 f  u_beacons/TILE[2].togglers[8191]_i_2/O
+                         net (fo=27, routed)          0.255     1.103    u_beacons/rst
+    SLICE_X0Y13          FDCE                                         f  u_beacons/divr_reg[11]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  
+    U7                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_in
+    U7                   IBUF (Prop_ibuf_I_O)         0.529     0.529 r  clk_in_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.248    clk_in_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.277 r  clk_in_IBUF_BUFG_inst/O
+                         net (fo=27, routed)          0.888     2.165    u_beacons/CLK
+    SLICE_X0Y13          FDCE                                         r  u_beacons/divr_reg[11]/C
+
+
+
+
+

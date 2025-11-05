@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Tue Nov  4 19:02:02 2025
+| Host         : mitre-Precision-5820-Tower running 64-bit Ubuntu 24.04.2 LTS
+| Command      : report_bus_skew -warn_on_violation -file top_photon_bus_skew_routed.rpt -pb top_photon_bus_skew_routed.pb -rpx top_photon_bus_skew_routed.rpx
+| Design       : top_photon
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

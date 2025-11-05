@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Nov  2 16:49:47 2025
+# Process ID: 1418222
+# Current directory: /home/public/llmmqp/photon_beacons
+# Command line: vivado
+# Log file: /home/public/llmmqp/photon_beacons/vivado.log
+# Journal file: /home/public/llmmqp/photon_beacons/vivado.jou
+# Running On: mitre-Precision-5820-Tower, OS: Linux, CPU Frequency: 1200.036 MHz, CPU Physical cores: 18, Host memory: 540506 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/public/llmmqp/Transformer-Accelerator-Based-on-FPGA/myproj/project_1.xpr
+# 0) go to the repo
+cd /home/public/llmmqp/Transformer-Accelerator-Based-on-FPGA
+# 1) create project if it doesn't exist
+if { [get_projects -quiet] eq "" } {
+    create_project project_1 myproj -part xc7z020clg400-1
+    # comment this if you don't have the board file
+    catch { set_property BOARD_PART www.digilentinc.com:pynq-z1:part0:1.0 [current_project] }
+}
+# 2) add ALL HDL sources under this repo — recursive
+set here [pwd]
+set verilog_files  [glob -nocomplain -types f -directory $here -recursive *.v]
+# 0) go to the repo
+cd /home/public/llmmqp/Transformer-Accelerator-Based-on-FPGA
+# 1) create project if it doesn't exist
+if { [get_projects -quiet] eq "" } {
+    create_project project_1 myproj -part xc7z020clg400-1
+    # comment this if you don't have the board file
+    catch { set_property BOARD_PART www.digilentinc.com:pynq-z1:part0:1.0 [current_project] }
+}
+# 2) add ALL HDL sources under this repo — recursive
+set here [pwd]
+set verilog_files  [glob -nocomplain -types f -directory $here -recursive *.v]
+# go to your repo
+cd /home/public/llmmqp/Transformer-Accelerator-Based-on-FPGA
+# create project if it isn't open
+if { [get_projects -quiet] eq "" } {
+    create_project project_1 myproj -part xc7z020clg400-1
+    # if you DON'T have this board file, just comment the next line
+    catch { set_property BOARD_PART www.digilentinc.com:pynq-z1:part0:1.0 [current_project] }
+}
+# --- helper: recursively collect files with given pattern ---
+proc collect_files {root pattern} {
+    set out {}
+    # files in this dir
+    foreach f [glob -nocomplain -directory $root $pattern] {
+        lappend out $f
+    }
+    # walk subdirs
+    foreach sub [glob -nocomplain -directory $root *] {
+        if {[file isdirectory $sub]} {
+            set sublist [collect_files $sub $pattern]
+            if {[llength $sublist]} {
+                set out [concat $out $sublist]
+            }
+        }
+    }
+    return $out
+}
+set here [pwd]
+# collect HDL
+set verilog_files [collect_files $here *.v]
+set sv_files      [collect_files $here *.sv]
+set vhdl_files    [collect_files $here *.vhd]
+# add them (only if there are any)
+if {[llength $verilog_files]} { add_files -norecurse $verilog_files }
+if {[llength $sv_files]}      { add_files -norecurse $sv_files }
+if {[llength $vhdl_files]}    { add_files -norecurse $vhdl_files }
+# let Vivado figure out the order
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

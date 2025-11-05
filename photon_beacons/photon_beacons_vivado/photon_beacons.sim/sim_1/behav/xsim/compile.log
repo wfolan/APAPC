@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/public/llmmqp/photon_beacons/src/photon_beacons.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module photon_beacons
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/public/llmmqp/photon_beacons/src/top_photon.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_photon
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/public/llmmqp/photon_beacons/photon_beacons_vivado/photon_beacons.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
