@@ -1,26 +1,23 @@
-## 200 MHz differential LVDS system clock (Bank 33)
-## From Genesys 2 reference: oscillator on AD12/AD11 (MRCC) -> LVDS_25
-set_property PACKAGE_PIN AD12 [get_ports clk_p]
-set_property PACKAGE_PIN AD11 [get_ports clk_n]
-set_property IOSTANDARD LVDS_25 [get_ports {clk_p clk_n}]
-create_clock -name sysclk200 -period 5.000 [get_ports clk_p]
+## Clock Signal
+set_property -dict { PACKAGE_PIN AD11 IOSTANDARD LVDS } [get_ports clk_n]
+set_property -dict { PACKAGE_PIN AD12 IOSTANDARD LVDS } [get_ports clk_p]
+create_clock -period 5.000 -name clk [get_ports clk_p]   ;# 200 MHz sysclk
 
-## Pushbutton reset (active-low) - on a VADJ bank: use LVCMOS12
-## (Pick the specific PACKAGE_PIN from the Genesys-2-Master.xdc and map to btn_rst_n)
-set_property PACKAGE_PIN <BTN_RST_PIN> [get_ports btn_rst_n]
-set_property IOSTANDARD LVCMOS12       [get_ports btn_rst_n]
-set_property PULLUP true               [get_ports btn_rst_n]
+## Buttons (use center button as active-low reset)
+set_property -dict { PACKAGE_PIN R19 IOSTANDARD LVCMOS33 } [get_ports { btn_rst_n }]; # Sch=cpu_resetn (BTNC)
 
-## Slide switches SW0..SW3 - VADJ bank (LVCMOS12). Use any 4 of the 8 SW pins.
-set_property PACKAGE_PIN <SW0_PIN> [get_ports {sw[0]}]
-set_property PACKAGE_PIN <SW1_PIN> [get_ports {sw[1]}]
-set_property PACKAGE_PIN <SW2_PIN> [get_ports {sw[2]}]
-set_property PACKAGE_PIN <SW3_PIN> [get_ports {sw[3]}]
-set_property IOSTANDARD LVCMOS12   [get_ports {sw[*]}]
+# LEDs (use LD0..LD3)
+set_property -dict { PACKAGE_PIN U30 IOSTANDARD LVCMOS33 } [get_ports { led[0] }]; # Sch=led[0]
+set_property -dict { PACKAGE_PIN U29 IOSTANDARD LVCMOS33 } [get_ports { led[1] }]; # Sch=led[1]
+set_property -dict { PACKAGE_PIN V20 IOSTANDARD LVCMOS33 } [get_ports { led[2] }]; # Sch=led[2]
+set_property -dict { PACKAGE_PIN V26 IOSTANDARD LVCMOS33 } [get_ports { led[3] }]; # Sch=led[3]
 
-## User LEDs LD0..LD3 - VADJ bank (LVCMOS12). Use any 4 of the 8 LED pins.
-set_property PACKAGE_PIN <LED0_PIN> [get_ports {led[0]}]
-set_property PACKAGE_PIN <LED1_PIN> [get_ports {led[1]}]
-set_property PACKAGE_PIN <LED2_PIN> [get_ports {led[2]}]
-set_property PACKAGE_PIN <LED3_PIN> [get_ports {led[3]}]
-set_property IOSTANDARD LVCMOS12    [get_ports {led[*]}]
+## Switches (SW0..SW3 on VADJ banks -> 1.2V default; keep LVCMOS12 unless you changed VADJ)
+set_property -dict { PACKAGE_PIN G19 IOSTANDARD LVCMOS12 } [get_ports { sw[0] }]; # Sch=sw[0]
+set_property -dict { PACKAGE_PIN G25 IOSTANDARD LVCMOS12 } [get_ports { sw[1] }]; # Sch=sw[1]
+set_property -dict { PACKAGE_PIN H24 IOSTANDARD LVCMOS12 } [get_ports { sw[2] }]; # Sch=sw[2]
+set_property -dict { PACKAGE_PIN K19 IOSTANDARD LVCMOS12 } [get_ports { sw[3] }]; # Sch=sw[3]## Clock Signal
+set_property -dict { PACKAGE_PIN AD11 IOSTANDARD LVDS } [get_ports clk_n]
+set_property -dict { PACKAGE_PIN AD12 IOSTANDARD LVDS } [get_ports clk_p]
+create_clock -period 5.000 -name clk [get_ports clk_p]   ;# 200 MHz sysclk
+

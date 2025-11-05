@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../x_and_y_switching_blocks.srcs/sources_1/new/U_block.v" \
+"../../../../../adder_1bit.v" \
+"../../../../x_and_y_switching_blocks.srcs/sources_1/new/x_block.v" \
+"../../../../x_and_y_switching_blocks.srcs/sources_1/new/y_block.v" \
+"../../../../x_and_y_switching_blocks.srcs/sim_1/new/test_1ba.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

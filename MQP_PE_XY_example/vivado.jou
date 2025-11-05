@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Nov  4 19:37:30 2025
+# Process ID: 316296
+# Current directory: /home/public/llmmqp/MQP_PE_XY_example
+# Command line: vivado
+# Log file: /home/public/llmmqp/MQP_PE_XY_example/vivado.log
+# Journal file: /home/public/llmmqp/MQP_PE_XY_example/vivado.jou
+# Running On: mitre-Precision-5820-Tower, OS: Linux, CPU Frequency: 1199.917 MHz, CPU Physical cores: 18, Host memory: 540506 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/public/llmmqp/MQP_PE_XY_example/MQP_PE_XY_example.xpr
+update_compile_order -fileset sources_1
